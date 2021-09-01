@@ -1,0 +1,170 @@
+#app,
+body,
+html,
+* {
+    padding: 0;
+    margin: 0;
+    /* height: 100%;
+    width: 100%; */
+}
+
+#app {
+    height: 100%;
+}
+
+.times{
+    font-size: 1.4rem;
+    color: #ffffff;
+    /* text-align: left; */
+    /* padding-left: 61px; */
+    /* height: 64%; */
+    line-height: 6rem;
+    letter-spacing: 0.3rem;
+    float: right;
+    margin-right: 3rem;
+}
+.header {
+    width: 100%;
+    background: url(../images/group.png) no-repeat;
+}
+
+.header .title {
+    width: 32%;
+    font-size: 2.4rem;
+    color: #ffffff;
+    text-align: left;
+    padding-left: 61px;
+    /* height: 64%; */
+    line-height: 6rem;
+    letter-spacing: 0.5rem;
+    display: inline-block;
+}
+
+.content {
+    height: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 90% !important;
+    /* margin: 0 auto; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content>div {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.send {
+    float: right;
+    /* margin-right: 9.5%; */
+}
+
+#app,
+.content {
+    width: 100%;
+}
+
+.el-transfer-panel {
+    width: 40%;
+    height: 700px;
+}
+
+.el-transfer-panel__list.is-filterable {
+    height: 700px;
+}
+
+.el-transfer-panel__list {
+    height: 650px;
+}
+
+.el-transfer {
+    /* text-align: center;     */
+}
+
+.el-transfer-panel {
+    text-align: left;
+}
+
+body {
+    background: url(../images//bg.png) no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+
+
+
+.el-transfer-panel__item.el-checkbox,
+.el-checkbox__label,
+.el-checkbox__label>span {
+    color: #fff !important;
+}
+
+.el-transfer-panel__header {
+    background: #041647 !important;
+}
+
+.el-transfer-panel {
+    background: #041647;
+}
+
+.el-transfer-panel__empty {
+    color: #fff !important;
+}
+
+.el-table {
+    width: 40% !important;
+    height: 90% !important;
+}
+
+
+.content_body {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100%;
+    margin-top: -20px;
+}
+
+.transfer {
+    margin: 0 20px;
+}
+
+
+.el-table__body-wrapper {
+    height: 600px;
+    overflow-y: auto;
+}
+
+.el-table tr th {
+    background: #041647 !important;
+    color: #ccc !important;
+}
+
+.el-table tr td {
+    background: #1a306f !important;
+    color: #fff !important;
+}
+
+.el-table__empty-block,
+.el-table__body-wrapper {
+    background-color: #041647;
+
+}
+
+.el-table__empty-text {
+    color: #fff;
+}
+
+.el-table__empty-block, .el-table__body-wrapper,.el-table tr th,.el-table th, .el-table tr,.el-table, .el-table__expanded-cell {
+    background: none !important;
+}

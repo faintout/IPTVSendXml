@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV采集终端</title>
+    <link rel="stylesheet" href="./lib/element/index.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./lib/layui/css/layui.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="header">
+            <div class="title">IPTV采集终端</div>
+            <div class="times">{{times}}</div>
+        </div>
+        <div class="content">
+            <div class="title">
+                <el-button @click="getLievEPGList">更新</el-button>
+                <el-button @click="sendLiveChannelBtn" class="send">发送</el-button>
+            </div>
+            <div class="content_body">
+                <!-- <el-transfer v-model="seleLiveEPGIndexList" :data="liveEPGList" :titles="['节目清单','拉流频道表']"></el-transfer> -->
+                <template>
+                    <el-table ref="multipleTable" :data="liveEPGList" tooltip-effect="dark" style="width: 40%">
+                        <el-table-column :label="'频道清单('+liveEPGList.length+')'">
+
+                            <el-table-column type="selection" width="55">
+                            </el-table-column>
+                            <el-table-column prop="ID" label="序号" width="60">
+                            </el-table-column>
+                            <el-table-column prop="ChannelIndex" label="频道序号" width="120">
+                            </el-table-column>
+                            <el-table-column prop="ChannelName" label="名称" width="200">
+                            </el-table-column>
+                            <el-table-column prop="URL" label="URL">
+                            </el-table-column>
+                        </el-table-column>
+                        <!-- <el-table-column prop="address" label="地址" show-overflow-tooltip>
+                        </el-table-column> -->
+                    </el-table>
+                </template>
+                <div class="transfer">
+                    <el-button @click="transfer(0)"><</el-button>
+                    <el-button @click="transfer(1)">></el-button>
+                </div>
+                <template>
+                    <el-table ref="multipleTable1" :data="liveChannelList" tooltip-effect="dark" style="width: 40%">
+                        <el-table-column :label="'拉流频道列表('+liveChannelList.length+')'">
+                            <el-table-column type="selection" width="55">
+                            </el-table-column>
+                            <el-table-column prop="ID" label="序号" width="60">
+                            </el-table-column>
+                            <el-table-column prop="ChannelIndex" label="频道序号" width="120">
+                            </el-table-column>
+                            <el-table-column prop="ChannelName" label="名称" width="200">
+                            </el-table-column>
+                            <el-table-column prop="URL" label="URL">
+                            </el-table-column>
+                        </el-table-column>
+                    </el-table>
+                </template>
+            </div>
+        </div>
+    </div>
+    <script src="./lib/vue.js"></script>
+    <script src="./lib/jquery.js"></script>
+    <script src="./lib/element/index.js"></script>
+    <!-- <script src="./assetsData/liveEPG2.js"></script> -->
+    <script src="./lib/layui/layui.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
